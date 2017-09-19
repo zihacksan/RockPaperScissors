@@ -1,0 +1,3 @@
+void endGame() {
+ exit();
+}
