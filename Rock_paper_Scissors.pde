@@ -14,20 +14,17 @@ boolean gameOn = false;
 
 
 void setup() {
+  // color of background
   background(10,20,100);
   // size of window
   size(600,600);
   // button objects declared
-  Button[0] = new Button(75, 400, 50, 50, color(255));
-  Button[1] = new Button(275, 400, 50, 50, color(255));
-  Button[2] = new Button(475, 400, 50, 50, color(255));
-  // color of background
-  //background(0);
-  // styling the font of text
-  r = createFont("Ariel", 30);
+  Button[0] = new Button(50, 400, 100, 100, color(10,20,100));
+  Button[1] = new Button(250, 400, 100, 100, color(10,20,100));
+  Button[2] = new Button(450, 400, 100, 100, color(10,20,100));
   // print computers random guess for testing
   println("computer's guess is: " + choices[index]);
-  
+
 }
 
 
@@ -40,16 +37,17 @@ void draw() {
   displayGame();
   
 }
+
 void mousePressed() {
   // is mouse clicking inside a button
-  if (mouseX >= 75 && mouseX <= 75+50 && mouseY >= 400 && mouseY <= 400+50) {
+  if (mouseX >= 50 && mouseX <= 50+100 && mouseY >= 400 && mouseY <= 400+100) {
     println("rock chosen");
     rockChoice=true;
-  } else if (mouseX >= 275 && mouseX <= 275+50 && mouseY >= 400 && mouseY <= 400+50) {
+  } else if (mouseX >= 250 && mouseX <= 250+100 && mouseY >= 400 && mouseY <= 400+100) {
     println("paper chosen");
     paperChoice=true;
   }
-  else if (mouseX >= 475 && mouseX <= 475+50 && mouseY >= 400 && mouseY <= 400+50) {
+  else if (mouseX >= 450 && mouseX <= 450+100 && mouseY >= 400 && mouseY <= 400+100) {
     println("scissors chosen");
     scissorChoice=true;
   }
@@ -94,6 +92,7 @@ void mousePressed() {
   }
 
 }
+
 
 
  
