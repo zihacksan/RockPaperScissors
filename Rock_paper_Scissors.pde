@@ -1,5 +1,4 @@
-// Font variable
-PFont r;
+
 // Initialising Array
 Button[] Button = new Button [3];
 // boolean for choices
@@ -7,42 +6,42 @@ boolean rockChoice=false;
 boolean paperChoice=false;
 boolean scissorChoice=false;
 boolean gameOver=false;
-// randomiser of chocies
-String choice = "rock";
+// randomiser of choices
 String[] choices = {"rock", "paper", "scissors"};
 int index = int (random(choices.length));
+// game state
+boolean gameOn = false;
 
 
 void setup() {
+  background(10,20,100);
   // size of window
   size(600,600);
   // button objects declared
-  Button[0] = new Button(75, 400, 50, 50);
-  Button[1] = new Button(275, 400, 50, 50);
-  Button[2] = new Button(475, 400, 50, 50);
+  Button[0] = new Button(75, 400, 50, 50, color(255));
+  Button[1] = new Button(275, 400, 50, 50, color(255));
+  Button[2] = new Button(475, 400, 50, 50, color(255));
   // color of background
-  background(22,33,244);
+  //background(0);
   // styling the font of text
   r = createFont("Ariel", 30);
+  // print computers random guess for testing
+  println("computer's guess is: " + choices[index]);
   
 }
 
 
 void draw() {
-  // goes through array indices 0,1,2 
+  // loop goes through array indices 0,1,2 
   for (int i=0; i < 3; i++) {
   // displaying the instances of object button
   Button[i].display();
   }
-  textFont(r);
-  textAlign(CENTER);
-  text("rock, paper, or scissors?",width/2,150);
-  text("rock",100,350);
-  text("paper",300,350);
-  text("scissors",500,350);
+  displayGame();
+  
 }
 void mousePressed() {
-  // mouse collision with buttons
+  // is mouse clicking inside a button
   if (mouseX >= 75 && mouseX <= 75+50 && mouseY >= 400 && mouseY <= 400+50) {
     println("rock chosen");
     rockChoice=true;
@@ -95,6 +94,8 @@ void mousePressed() {
   }
 
 }
+
+
  
   
 
