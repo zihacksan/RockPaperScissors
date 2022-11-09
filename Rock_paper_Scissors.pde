@@ -55,41 +55,41 @@ void mousePressed() {
   }
   // if user draws with computer
   if (rockChoice==1 && computerChoice==1) {
-    println("you drew!");
+    println("you stupid!");
     endGame();
   }
   if (paperChoice==1 && computerChoice==2) {
-    println("you drew!");
+    println("you stupid!");
     endGame();
   }
   if (scissorChoice==1 && computerChoice==3) {
-    println("you drew!");
+    println("you stupid!");
     endGame();
   }
   // if user wins
   if (rockChoice==1 && computerChoice==3) {
-    println("you WON!");
+    println("you stupid!");
     endGame();
   }
   if (paperChoice==1 && computerChoice==1) {
-    println("you WON!");
+    println("you stupid!");
     endGame();
   }
   if (scissorChoice==1 && computerChoice==2) {
-    println("you WON!");
+    println("you stupid!");
     endGame();
   }
   // if user loses
   if (rockChoice==1 && computerChoice==2) {
-    println("you lose!");
+    println("you stupid!");
     endGame();
   }
   if (paperChoice==1 && computerChoice==3) {
-    println("you lose!");
+    println("you stupid!");
     endGame();
   }
   if (scissorChoice==1 && computerChoice==1) {
-    println("you lose!");
+    println("you stupid!");
     endGame();
   }
 
